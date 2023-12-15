@@ -3,7 +3,7 @@ Library    SeleniumLibrary
 
 *** Variables ***
 ${browser}  chrome
-${login_url}    https://www.google.com/
+${login_url}    https://www.saucedemo.com/
 
 *** Keywords ***
 Open my browser
