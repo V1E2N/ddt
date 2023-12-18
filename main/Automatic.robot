@@ -25,8 +25,13 @@ Input Email
 	[Arguments]    ${email}
 	Input Text    //input[@ng-model="EmailAdress"]  ${email}
 Input Phone
-	Input Text   //input[@ng-model="Phone"]
+	[Arguments]    ${phone}
+	Input Text   //input[@ng-model="Phone"]     ${phone}
 Gender Option
-	Input Text    //input[@value="Male"]
+	Click Element       //input[@value="Male"]
+Login button
+	Click Element    //button[@id="submitbtn"]
+	Sleep    2
+	Execute Javascript    window.ScrollTo(0,500)
 page display
-	Page Should Contain    Please include an @ in email address
+	Page Should Contain    Please include an '@' in email address
